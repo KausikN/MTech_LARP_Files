@@ -1,0 +1,259 @@
+\documentclass[solution,addpoints,12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{animate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+
+\newenvironment{Solution}{\begin{EnvFullwidth}\begin{solution}}{\end{solution}\end{EnvFullwidth}}
+
+\printanswers
+%\unframedsolutions
+\pagestyle{headandfoot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% INSTRUCTIONS %%%%%%%%%%%%%%%%%%%%%
+% * Fill in your name and roll number below
+
+% * Answer in place (after each question)
+
+% * Use \begin{solution} and \end{solution} to typeset
+%   your answers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Fill in the details below
+\def\studentName{\textbf{Name: TODO}}
+\def\studentRoll{\textbf{Roll No: TODO}}
+
+\firstpageheader{CS 6015 (LARP) - Homework 1}{}{\studentName,\studentRoll}
+\firstpageheadrule
+
+\newcommand{\brac}[1]{\left[ #1 \right]}
+\newcommand{\curly}[1]{\left\{ #1 \right\}}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\card}[1]{\left\lvert #1 \right\rvert}
+
+\begin{document}
+
+\noindent \textbf{Honor code}: I pledge on my honor that: I have completed all steps in the below homework on my own, I have not used any unauthorized materials while completing this homework, and I have not given anyone else access to my homework.
+\\~\\~\\
+\begin{flushright}
+\textbf{Name and Signature}
+
+\end{flushright}
+
+
+\begin{questions}
+
+\question[1] Have you read and understood the honor code?
+\begin{solution}
+
+\end{solution}
+
+\uplevel{\textbf{Concept}:  Linear Transformation}
+
+\question[1] 
+Consider a linear transformation $T: \mathbb{R}^3 \rightarrow \mathbb{R}^3$. Suppose $T (\begin{bmatrix}2 & 3& -6\end{bmatrix}^\top) = \begin{bmatrix}2 & 5& 1\end{bmatrix}^\top$ and $T (\begin{bmatrix}4 & -2& 8\end{bmatrix}^\top) = \begin{bmatrix}7 & -2& -2\end{bmatrix}^\top$. Find $T (\begin{bmatrix}-2 & 13& -34\end{bmatrix}^\top)$
+\begin{solution}
+\end{solution}
+
+\question[1] Prove that if $T(\mathbf{x} + \mathbf{y}) = T(\mathbf{x}) + T(\mathbf{y})$ and $T(a\mathbf{x}) = a T(\mathbf{x})$ then $T(b\mathbf{x} + c\mathbf{y}) = bT(\mathbf{x}) + cT(\mathbf{y})$.
+\begin{solution}
+\end{solution}
+
+\question[2] 
+Let T be a transformation defined from $\mathbb{R}^n \rightarrow \mathbb{R}^n$ given by \\
+$T(\mathbf{X}) = \mathbf{X} + 1$ where $\mathbf{X} \in \mathbf{R}^n$ \\
+Formally argue if T is a linear transformation or not. If Yes, then give the matrix representing that transformation.  
+\begin{solution}
+\end{solution}
+
+\question[2] Suppose $A \in \mathbf{R}^{3 \times 3}$ and $\mathbf{x}, \mathbf{y} \in \mathbf{R}^{3} (\mathbf{x} \neq \mathbf{0}, \mathbf{y} \neq \mathbf{0}$). Further, suppose $A\mathbf{x} = \mathbf{b}$ and $A\mathbf{y} = \begin{bmatrix} 0 & 0 & 0\end{bmatrix}^\top$. If $\begin{bmatrix} 1 & 1 & 1\end{bmatrix}^\top$ is one solution for $A\mathbf{x} = b$, write down at least one more solution (you are welcome to write down all the infinite solutions if you want :-) ).  
+\begin{solution}
+\end{solution}
+
+\uplevel{\textbf{Concept}:  Matrix multiplication}
+\question[1] 
+Statement: If A and B are matrices such that A is not a Null or Identity matrix and B is not a Null matrix,\\
+if $AB = A^2$ then A = B.\\
+options:\\
+a) always true,\\
+b) always false,\\
+c) sometimes can be true , sometimes can be false also\\\textbf{Explain your answer based on the option you have chosen}.
+\begin{solution}
+\end{solution}
+
+\question 
+
+$$A = \begin{bmatrix}
+1 & 2 & 5 & 6 \\
+-1 & 3 & -2 & 1 \\
+3 & 0 & 0 & 1 \\
+1 & 5 & 4 & -14 \\
+\end{bmatrix}$$
+
+\uplevel{
+For each of the equations below, find $\mathbf{x}$}
+\begin{parts}
+\part[\half] $A\mathbf{x} = \begin{bmatrix}1&10&4&-11\end{bmatrix} ^\top$
+\begin{solution}
+\end{solution}
+
+\part[\half] $A\mathbf{x} = \begin{bmatrix}16&4&-30&81\end{bmatrix} ^\top$
+\end{parts}
+\begin{solution}
+\end{solution}
+
+\question[1]
+Give two matrices $A$ and $B$ (of appropriate dimensions) such that $A \neq B$ and, 
+
+\begin{parts}
+
+\part[\half] $AB = BA$
+\begin{solution}
+\end{solution}
+
+\part[\half] 
+$AB \neq BA$
+\begin{solution}
+\end{solution}
+
+\end{parts}
+
+
+\question 
+If $A$, $B$ \& $C$ are matrices (assume appropriate dimensions) prove that, 
+
+\begin{parts}
+\part[\half] $(A + B)^T = A^T + B^T$
+\begin{solution}
+\end{solution}
+
+\part[\half] 
+$(AB)^T = B^TA^T$
+\begin{solution}
+\end{solution}
+
+\end{parts}
+\question[1] Let A be any matrix. In the lecture we saw that $A^\top A$ is a square symmetric matrix. Is  $AA^\top$ also a square symmetric matrix? (Hint: The answer is either ``Yes, except when $\dots$'' or  ``No, except when $\dots$''.)
+
+\uplevel{\textbf{Concept}:  Inverse}
+\question[1]
+If $(A+B)^{2} = A^{2} + 2AB + B^{2}$. Show that $AB=BA$. (assume $AB$, $BA$ exists.)
+\begin{solution}
+\end{solution}
+
+\question What is the inverse of the following two matrices? (Hint: I don't want you to compute the inverse using some method. Instead think of the linear transformation that these matrices do and think how you would reverse that transformation. \textbf{You will have to explain your answer in words clearly stating the linear transformations being performed.}) \\
+\begin{parts}
+\part[\half] $$A = \begin{bmatrix}
+\frac{1}{2} & 0 & 0 & 0 \\
+0 & \frac{1}{2} & 0 & 0 \\
+0 & 0 & \frac{1}{2} & 0 \\
+0 & 0 & 0 & \frac{1}{2} \\
+\end{bmatrix}$$
+\begin{solution}
+\end{solution}
+
+\part [\half] $$A = \begin{bmatrix}
+1 & 0 & 0  \\
+2 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}$$
+\begin{solution}
+\end{solution}
+
+\part [1] $$A = \begin{bmatrix}
+cos\theta & -sin\theta  \\
+sin\theta & cos\theta \\
+\end{bmatrix}$$
+\begin{solution}
+\end{solution}
+
+\end{parts}
+
+\uplevel{\textbf{Concept}:  System of linear equations}
+\question[1] 
+Argue why the following system of linear equations will not have any solutions.\\~\\
+
+$$\begin{matrix}
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+-7 & -7 & -7 & -7 \\
+2 & 4 & 6 & 9 \\
+1 & 2 & 3 & 4 \\
+\end{bmatrix} & \mathbf{x} & = &
+\begin{bmatrix}
+5 \\
+-35 \\
+10 \\
+6
+\end{bmatrix}
+\end{matrix}
+$$
+\question Consider the following 3 planes 
+
+\begin{align*}
+3x + 2y - z &= 2 \\
+x - 4y + 3z &= 1 \\
+4x - 2y + 2z &= 3 
+\end{align*}
+
+\begin{parts}
+\part[\half] Plot these planes in geogebra and paste the resulting figure here (you can download the figure as .png and paste it here)
+\begin{solution}
+\end{solution}
+\part[\half] How many solutions does the above system of linear equations have? (based on visual inspection in geogebra)
+\begin{solution}
+\end{solution}
+\part[1] Notice that the third equation can be obtained by adding the first two equations. Based on this observation, can you explain your answer for the number of solutions in the previous part of the question. (Note that I am looking for an answer in plain English which does not include terms like ``linear independence'' or ``dependence of columns/rows''. In other words, your answer should be based only on concepts/ideas which have already been discussed in the class)
+\begin{solution}
+\end{solution}
+
+\end{parts}
+
+\question
+Consider the following system of linear equations:
+
+\begin{align*}
+x + 2y + 4z &= 1 \\
+x + 5y - 2z &= 2 \\
+\end{align*}
+
+\uplevel{Add one more equation to the above system such that the resulting system of 3 linear equations has}
+\begin{parts}
+\part[\half] 0 solutions
+\begin{solution}
+\end{solution}
+\part[1] exactly 1 solution
+\begin{solution}
+\end{solution}
+\part[\half] infinite solutions
+\begin{solution}
+\end{solution}
+\end{parts}
+
+\if 0
+\question Can you express a generic vector [x, y] as the linear combination of two vectors [a,b] and [c, d] . Under what condition would this not be possible (when ab,c,d are in some multiple relation).
+
+\question A question about the square grid and what would happen with a shear transformation.
+
+\question A question where you show A = LU and then ask what entry in the last cell (A mxn) would have resulted in a 0 = non-zero situation)
+\question if PA exchanges the columns of A then what can you say about A
+
+\question some Qs on propeties of inverse from here https://math.mit.edu/~gs/linearalgebra/ila0205.pdf
+
+\question some proofs from herE: http://homepages.warwick.ac.uk/~ecsgaj/matrixAlgSlidesC.pdf
+
+\question what is the inverse of A^T
+
+\fi
+
+\end{questions}
+\end{document} 

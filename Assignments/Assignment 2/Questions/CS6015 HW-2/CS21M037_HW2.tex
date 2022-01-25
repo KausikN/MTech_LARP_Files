@@ -1,0 +1,290 @@
+\documentclass[solution,addpoints,12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{animate}
+\usepackage{hyperref}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newenvironment{Solution}{\begin{EnvFullwidth}\begin{solution}}{\end{solution}\end{EnvFullwidth}}
+
+\printanswers
+%\unframedsolutions
+\pagestyle{headandfoot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% INSTRUCTIONS %%%%%%%%%%%%%%%%%%%%%
+% * Fill in your name and roll number below
+
+% * Answer in place (after each question)
+
+% * Use \begin{solution} and \end{solution} to typeset
+%   your answers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Fill in the details below
+\def\studentName{\textbf{Name: TODO}}
+\def\studentRoll{\textbf{Roll No: TODO}}
+
+\firstpageheader{CS 6015 (LARP) - Homework 2}{}{\studentName,\studentRoll}
+\firstpageheadrule
+
+\newcommand{\brac}[1]{\left[ #1 \right]}
+\newcommand{\curly}[1]{\left\{ #1 \right\}}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\card}[1]{\left\lvert #1 \right\rvert}
+
+\begin{document}
+
+\noindent \textbf{Honor code}: I pledge on my honor that: I have completed all steps in the below homework on my own, I have not used any unauthorized materials while completing this homework, and I have not given anyone else access to my homework.
+\\~\\~\\
+\begin{flushright}
+\textbf{Name and Signature}
+
+\end{flushright}
+
+
+\begin{questions}
+
+\question[1] Have you read and understood the honor code?
+\begin{solution}
+
+\end{solution}
+
+\uplevel{\textbf{Concept}:  Linear Combinations}
+\question[2] Consider the vectors $[x, y], [a,b]$ and $[c, d]$. 
+\begin{parts}
+\part Express $[x, y]$ as a linear combination of $[a,b]$ and $[c, d]$.
+\begin{solution}
+
+\end{solution}
+
+\part Based on the expression that you have derived above, write down the condition under which $[x, y]$ cannot be expressed as a linear combination of $[a,b]$ and $[c, d]$. (Must: the condition should talk about some relation between the scalars $a,b,c,d,x$ and $y$)
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+
+
+\uplevel{\textbf{Concept}:  Elementary matrices}
+
+
+\question[1] 
+Compute L and U for the matrix\\
+$$A = \begin{bmatrix}
+a & a & a & a\\
+a & b & b & b\\
+a & b & c & c\\
+a & b & c & d
+\end{bmatrix}$$
+
+\uplevel{Find four conditions on a, b, c, d to get A = LU with 4 pivots}
+\begin{solution}
+
+\end{solution}
+
+\question[1] 
+Let $E_1, E_2, E_3, \dots, E_n$ be $n$ lower triangular  elementary matrices.\\Let $(i_1, j_1), (i_2, j_2), \dots (i_n, j_n)$ be the position of the non-zero off-diagonal element in each of these elementary matrices. Further, $if~k \neq m~then~(i_k, j_k) \neq (i_m, j_m)$ (\textit{i.e.}, no two elementary matrices in the sequence have a non-zero off-diagonal element in the same position). Prove that the product of these $n$ elementary matrices will have all diagonal entries as 1. (Proving this will help you understand why the diagonal elements of $L$ are always equal to 1.)
+\begin{solution}
+
+\end{solution}
+
+\uplevel{\textbf{Concept}:  Inverse}
+\question[\half] 
+Show that the matrix $B^{\top}AB$ is symmetric if $A$ is symmetric.
+\begin{solution}
+
+\end{solution}
+
+\question[2] Prove that a $n \times n$ matrix A is invertible if and only if Gaussian Elimination of A produces $n$ non-zero pivots. 
+\begin{solution}
+~\\~\\
+Proof (the if part): \\
+~\\~\\
+Proof (the only if part): \\
+\end{solution}
+
+\question[1 \half] 
+
+If $A$ and $B$ are $n\times n$ and $n\times m$ matrices respectively and $a$ and $b$ are $n\times 1$ and $m\times 1$ vectors respectively, then what is the cost of:
+\begin{parts}
+\part Computing $AB$
+\begin{solution}
+
+\end{solution}
+\part Computing $B^T a$
+\begin{solution}
+
+\end{solution}
+\part Computing $A^{-1}$
+\begin{solution}
+
+\end{solution}
+\end{parts}
+
+\uplevel{\textbf{Concept}:  LU factorisation}
+\question [1 \half] 
+\begin{parts}
+\part Under what conditions is the would A have a full set of pivots ?\\
+
+ A=$\begin{bmatrix}
+1 & 0 & 0\\
+-1 & 1& 0\\
+0 & -1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+d_1 & & \\
+& d_2 & \\
+& & d_3
+\end{bmatrix}
+\begin{bmatrix}
+1 & -1 & 0\\
+0 & 1 & -1\\
+0 & 0 & 1
+\end{bmatrix}$
+
+\begin{solution}
+
+\end{solution}
+
+\part Solve as two triangular systems, without multiplying LU to find A:\\
+LUx=$\begin{bmatrix}
+1 & 0 & 0 \\
+1 & 1& 0\\
+1 & 0 & 1
+\end{bmatrix}$
+$\begin{bmatrix}
+2 & 4& 4\\
+0 & 1 & 2\\
+0 & 0 & 1
+\end{bmatrix}$
+$\begin{bmatrix}
+x_{1}\\x_{2}\\x_{3}
+\end{bmatrix}$=$\begin{bmatrix}
+2\\0\\2
+\end{bmatrix}$
+\begin{solution}
+
+\end{solution}
+
+
+\end{parts}
+
+\question[2] 
+
+
+
+Consider the following system of linear equations. Find the $LU$ factorisation of the matrix A corresponding to this system of linear equations. Show all the steps involved. (this is where you will see what happens when you have to do more than 1 permutations).
+
+\begin{align*}
+x + y   &=  -3\\
+w -x - y         &= +2\\
+3w - 3x - 3y  -z   &= -19\\
+ -5x -3y -3z  &=  -2 
+\end{align*}
+
+\begin{solution}
+
+\end{solution}
+
+\question[1] 
+For a square matrix A, prove that $LDU$ factorisation is unique.
+\begin{solution}
+
+\end{solution}
+
+\question[1 \half] 
+Consider the matrix $A$ which factorises as:
+
+$\begin{bmatrix}
+1 & 0 & 0\\
+7 & 1 & 0\\
+0 & 5 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 7 & 0\\
+0 & 1 & 5\\
+0 & 0 & 1
+\end{bmatrix}$
+
+\uplevel{Without computing $A$ or $A^{-1}$ argue that}
+
+\begin{parts}
+\part A is invertible (I am looking for an argument which relies on a fact about elementary matrices)
+\begin{solution}
+
+\end{solution}
+\part A is symmetric (convince me that $A_{ij} = A_{ji}$ without computing $A$)
+\begin{solution}
+
+\end{solution}
+\part A is tridiagonal (again, without computing $A$ convince me that all elements except along the 3 diagonals will be 0.)
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+
+
+
+\uplevel{\textbf{Concept}: Lines and planes}
+\question[1 \half] 
+Consider the following system of linear equations 
+\begin{align*}
+    a_1x_1 + b_1y_1 + c_1z_1 & = 1\\
+    a_2x_2 + b_2y_2 + c_2z_2 & = 2\\
+    a_3x_3 + b_3y_3 + c_3z_3 & = 3
+\end{align*}
+Each equation represents a plane, so find out the values for the coefficients such that the following conditions are satisfied:\\
+\begin{enumerate}
+    \item All planes intersect at a line
+    \item All planes intersect at a point
+    \item Every pair of planes intersects at a different line.
+\end{enumerate}
+\begin{solution}
+
+\end{solution}
+
+\question [1 \half]  
+Starting with a first plane $u-v-w=-1$, find the equation for
+\begin{parts}
+\part the parallel plane through the origin.
+\begin{solution}
+
+\end{solution}
+\part a second plane that also contains the points (-1,-1,1) and (-7,-5,-1). 
+\begin{solution}
+
+\end{solution}
+\part a third plane that meets the first and second in the point (2, 1, 2).
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+
+\uplevel{\textbf{Concept}: Transpose}
+\question[2] Consider the transpose operation.
+
+\begin{parts}
+\part Show that it is a linear transformation.
+\begin{solution}
+
+\end{solution}
+
+\part Find the matrix corresponding to this linear transformation.
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+
+
+\end{questions}
+\end{document} 

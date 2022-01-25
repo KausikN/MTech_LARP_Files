@@ -1,0 +1,275 @@
+\documentclass[solution,addpoints,12pt]{exam}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{animate}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newenvironment{Solution}{\begin{EnvFullwidth}\begin{solution}}{\end{solution}\end{EnvFullwidth}}
+
+\printanswers
+%\unframedsolutions
+\pagestyle{headandfoot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% INSTRUCTIONS %%%%%%%%%%%%%%%%%%%%%
+% * Fill in your name and roll number below
+
+% * Answer in place (after each question)
+
+% * Use \begin{solution} and \end{solution} to typeset
+%   your answers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Fill in the details below
+\def\studentName{\textbf{Name: TODO}}
+\def\studentRoll{\textbf{Roll No: TODO}}
+
+\firstpageheader{CS 6015 (LARP) - Homework 6 (\numpoints~Marks)}{}{\studentName,\studentRoll}
+\firstpageheadrule
+
+\newcommand{\brac}[1]{\left[ #1 \right]}
+\newcommand{\curly}[1]{\left\{ #1 \right\}}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\card}[1]{\left\lvert #1 \right\rvert}
+
+\begin{document}
+
+\noindent \textbf{Honor code}: I pledge on my honor that: I have completed all steps in the below homework on my own, I have not used any unauthorized materials while completing this homework, and I have not given anyone else access to my homework.
+\\~\\~\\
+\begin{flushright}
+\textbf{Name and Signature}
+
+\end{flushright}
+
+
+\begin{questions}
+
+\question[1] Have you read and understood the honor code?
+\begin{solution}
+
+\end{solution}
+
+\uplevel{\textbf{Count, Count, Count!}}
+
+\question[1] In how many ways can 10 people be seated:
+
+\begin{parts}
+\part in a row such that Motu and Patlu sit next to each other (there is only one boy named Motu and only one boy named Patlu in the group)
+\begin{solution}
+
+\end{solution}
+\part in a row such that there are 5 engineers and 5 doctors and no two doctors or no two engineers can sit next to each other
+\begin{solution}
+
+\end{solution}
+\part in a row such that there are 3 engineers, 3 doctors and 4 lawyers and all people of the same profession should sit in consecutive positions.
+\begin{solution}
+
+\end{solution}
+\part in a row such that there are 5 married couples and each couple must sit together.
+\begin{solution}
+
+\end{solution}
+
+\end{parts}
+ 
+\question[\half] How many unique 9 letter words can you form using the letters of the word MANMOHANA (the words can be gibberish)?
+\begin{solution}
+This problem will introduce you to the division principle which we could not cover in class
+\end{solution}
+
+\question[\half] Suppose you have a class of 7 students (A,B,C,D,E,F,G) who need to be arranged in a line with the following restrictions: 
+\begin{enumerate}
+    \item A has to be in one of the first 3 slots
+    \item B and A are very good friends and insist on being next to each other
+    \item B doesn't want to stand immediately behind C
+\end{enumerate}
+In how many different ways can you arrange them?
+\begin{solution}
+This problem will introduce you to the addition principle which we could not cover in class.
+\end{solution}
+
+The boring questions are done. I hope you find the rest of the assignment to be interesting!
+
+\uplevel{\textbf{The birthday problem}}
+
+\question[3] The days of the year can be numbered 1 to 365 (ignore leap days). Consider a group of $n$ people, of which you are not a member. Any of the 365 days is equally likely to be the birthday of any member of this group. An element of the sample space $\Omega$ will be a sequence of $n$ birthdays (one for each person).
+
+\begin{parts}
+\part How many elements are there in the sample space?
+\begin{solution}
+
+\end{solution}
+
+\part Let $A$ be the event that at least one member of the group has the same birthday as you. What is the probability of this event $A$?
+\begin{solution}
+
+\end{solution}
+
+%\part Write a formula for computing the probability of the event that any two members of the group will have the same birthday?
+%\begin{solution}
+
+%\end{solution}
+
+\part What is the minimum value of $n$ such that $P(A) \geq 0.5$?
+\begin{solution}
+
+\end{solution}
+
+\part Let $B$ be the event that at least two members of the group share the same birthday. What is the probability of this event $B$?
+\begin{solution}
+
+\end{solution}
+
+\part What is the minimum value of $n$ such that $P(B) \geq 0.5$?
+\begin{solution}
+
+\end{solution}
+
+\part \textbf{[Ungraded~question]} Why is there a big gap between the answers to part (c) and part (e)? (although at ``first glance'' they look very similar problems)
+
+\end{parts}
+
+\uplevel{\textbf{A biased coin}}
+
+\question[1] Your friend Chaman has a coin which is biased (i.e., $P(H) \neq P(T)$). He proposes that he will toss the coin twice and asks you to bet on one of these events: $A$: both the tosses will result in the same outcome or $B$: both the tosses will result in a different outcome. Which event will you bet on to maximize your chance of winning the bet. (I am looking for a precise mathematical answer. No marks for answers which do not have an explanation). 
+\begin{solution} 
+\end{solution}
+
+\uplevel{\textbf{Alice in Wonderland}}
+
+\question[1] A bag contains one ball which could either be green on red. You take another red ball and put it in this pouch. You now close your eyes and pull out a ball from the pouch. It turns out to be red. What is the probability that the original ball in the pouch was red?
+\begin{solution} 
+I wonder what is the connection to Alice in Wonderland!
+\end{solution}
+
+\uplevel{\textbf{Rock, paper and scissors}}
+
+\question[2] Your friend Chaman has 3 strange dice: red, yellow and green. Unlike a standard die whose 6 faces are the numbers 1,2,3,4,5,6 these 3 dice have the following faces: red: 3,3,3,3,3,6, yellow: 5,5,5,2,2,2 and green: 4,4,4,4,4,1. Chaman suggests the following game: (i) You pick any one die (ii) Chaman then ``carefully'' picks one of the remaining two dice. Each of you will then roll your own die a 100 times. If on a given roll, the score of your die is higher than the score of Chaman's die then you get 1 INR else Chaman gets 1 INR. You play this game for many days and realise that you lose more often than Chaman.
+
+\begin{parts}
+\part Why are you losing more often? or What is Chaman's ``carefully'' planned strategy? (the key thing to note is that he lets you choose first)
+\begin{solution} 
+ I wonder what is the connection to rock, paper and scissors!
+\end{solution}
+ 
+\part You realise what is happening and decide to turn the tables on Chaman. You buy 3 dice which are identical to Chaman's red, yellow and green dice. You now propose that instead of rolling a single die each of you will roll two dice of the same color. The rest of the rules remain the same (i) You pick any one color (ii) Chaman then uses his original strategy to carefully pick a different color (he is overconfident and simply uses the same strategy that he used when you were rolling only one die) (iii) If on a given roll, the sum of your two dice is greater than the sum of Chaman's two dice then you get 1 INR else Chaman gets 1 INR. To his horror Chaman realises that now he is loosing more often. Explain why?
+\begin{solution} 
+ If you need a clarification on this Q pleas ask during the lecture.
+\end{solution}
+
+\end{parts}
+ 
+\uplevel{\textbf{Sitting under an apple tree}}
+
+\question [1] Which of the following has a greater chance of success?
+
+\begin{itemize}
+    \item[A.] Six fair dice are tossed independently and at least one “6” appears.
+    \item[B.]  Twelve fair dice are tossed independently and at least two “6”s appear.
+    \item[C.] Eighteen fair dice are tossed independently and at least three “6”s appear.
+\end{itemize}
+Explain your answer.
+\begin{solution} 
+ The title for this problem is weird, or is it?
+\end{solution}
+
+\uplevel{\textbf{With love from Poland}}
+\question [1] A chain smoker carries two matchboxes - one in his left pocket and another in his right pocket. Every time he wants to light a cigarette he randomly selects a matchbox from one of the two pockets and then uses a matchbox from that box to light his cigarette. Suppose he takes out a matchbox and sees for the first time that it is empty, what is the probability that the matchbox in the other pocket has exactly one matchstick left?
+\begin{solution} 
+ From one mathematician to another.
+\end{solution}
+
+\uplevel{\textbf{A paradox}}
+
+\question[1] Suppose there are 3 boxes:
+\begin{enumerate}
+    \item a box containing two gold coins,
+    \item a box containing two silver coins,
+    \item a box containing one gold coin and one silver coin.
+\end{enumerate}
+You select one box at random and draw a coin from it. The coin turns out to be a gold coin. You remove this coin and draw another coin from the same box. What is the probability that the second coin is also a gold coin?
+\begin{solution} 
+ Hmm, what is the paradox here?
+\end{solution}
+
+\uplevel{\textbf{Once upon a time in Goa}}
+
+\question[1] You are in one of the famous casinos in Goa\footnote{I know about casinos in Goa purely out of academic interest.}. You are observing the game of roulette. A roulette has 36 slots of which 18 are red and the remaining 18 are black. Each slot is equally likely. The manager places a ball on the roulette and then spins the roulette. When the roulette stops spinning, the ball lands in one of the 36 slots. If it lands in a slot which has the same color as what you bet on then you win. You do not believe in gambling but you are a student of probability\footnote{Ah! That's why you are in a casino! That makes perfect sense!}. You observe that the ball has landed in a black slot for the 26 consecutive rounds. Based on what you have learned in CS6015 you predict that there is a much higher chance of the ball landing in a red slot in the next round (since the probability of 27 consecutive black slots is very very low). You bet all your life's savings on red. What is the probability that you will win?
+
+\begin{solution}
+ The answer should of course be (1 - the probability of getting 27 blacks in a row). Right?
+\end{solution}
+
+
+\uplevel{\textbf{Oh Gambler! Thy shall be ruined!}}
+
+\question[2] 
+You play a game in a casino\footnote{Again, my interest in casinos in purely academic} where your chance of winning the game is $p$. Every time you win, you get 1 rupee and every time you lose the casino gets 1 rupee. You have $i$ rupees at the start of the game and the casino has $N - i$ rupees (obviously, $N >> i$). The game ends when you go bankrupt or the casino goes bankrupt. In either case, the winner will walk away with a total of $N$ rupees. 
+
+\begin{parts}
+\part Find the probability $p_i$ of winning when you start the game with $i$ rupees.
+\begin{solution}
+ \end{solution}
+
+\part What happens if $p = \frac{1}{2}$ ?
+\begin{solution}
+ \end{solution}
+
+\part \textbf{[Ungraded~question]} Can you reason why it does not make sense to take on a casino ($N >> i$)? Will you always go bankrupt in the long run?
+\begin{solution}
+Note that in a casino $p<\frac{1}{2}$, i.e, the odds are always in favour of the casino (How does a casino do this without you realising it? We will see this when we discuss the game of roulette!)
+\end{solution}
+
+\end{parts}
+
+\uplevel{\textbf{The disappointed professor}}
+\question[1] A particular class has had a history of low attendance. The dejected professor decides that he will not lecture unless at least $k$ of the $n$ students enrolled in the class are present. Each student will independently show up with probability
+$p$ if the weather is good, and with probability $q$ if the weather is bad. Given that the probability of bad weather on a given day is $r$, obtain an expression for the probability that the professor will teach his class on that day. [Bertsekas and Tsitsikilis, Introduction to Probability, 2nd edition.]
+\begin{solution}
+Any resemblance to any person, alive or very alive, is purely intentional.
+\end{solution}
+ 
+\uplevel{\textbf{The John von architecture}}
+\question[1] Suppose you have a biased coin ($P(H) \neq P(T)$). How will you use it to make unbiased decision. (hint: you can toss the coin multiple times)
+\begin{solution}
+
+\end{solution}
+
+
+\uplevel{\textbf{Pascal to the rescue}}
+\question [1]
+A six-side die is rolled three times independently. What is more likely: a sum of 11 or 12?
+\begin{solution}
+
+\end{solution}
+
+\uplevel{\textbf{Enemy at the gates}}
+\question[1] There are 41 soldiers surrounded by the enemy. They would rather die than get captured. They sit around in a circle and devise the following plan. Each soldier will kill the person to his immediate left. They will continue this till only one soldier remains who would then commit suicide. For example, if there are 7 soldiers numbered 1, 2, 3, 4, 5, 6, 7 sitting in a circle then they proceed as follows: 1 kills 2, 3 kills 4, 5 kills 6, 7 kills 1, 3 kills 5, 7 kills 3, 7 commits suicide. 
+
+\begin{parts}
+\part In how many ways can 41 soldiers be arranged around a circle?
+\begin{solution}
+
+\end{solution}
+
+\part If you were one of the 41 soldiers and the soldiers were randomly arranged in the circle, what is the probability that you would survive?
+\begin{solution}
+
+\end{solution}
+
+\part \textbf{[Ungraded question]} Is there a specific position in which you can sit so that you are the last surviving soldier?
+\begin{solution}
+
+\end{solution}
+\end{parts}
+
+
+\end{questions}
+\end{document} 
