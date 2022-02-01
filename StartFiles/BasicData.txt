@@ -1,5 +1,0 @@
-Link for algebra visualisations
-https://geogebra.org/3d
-
-Slides
-http://www.cse.iitm.ac.in/~miteshk/CS6015_2021.html
